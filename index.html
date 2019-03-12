@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Train | Schedule</title>
+
+    <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <!-- Reset CSS -->
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <!-- My CSS -->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <!-- Firebase Reference -->
+    <script src="https://www.gstatic.com/firebasejs/5.8.6/firebase.js"></script>
+    <!-- Moment.js Reference -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
+
+</head>
+
+<body>
+
+
+    <div class="container-fluid p-4 border border-right-0 border-left-0 border-dark">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 text-center header">
+                    <h1 class="display-4">Train Schedule</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="header container border border-dark">
+        <div class="row">
+            <div class="col-sm-12 bg-dark current antique">
+                Train Schedule
+            </div>
+
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th class="font-weight-bold" scope="col">Train Name</th>
+                        <th class="font-weight-bold" scope="col">Destination</th>
+                        <th class="font-weight-bold" scope="col">Frequency (min)</th>
+                        <th class="font-weight-bold" scope="col">Next Arrival</th>
+                        <th class="font-weight-bold" scope="col">Minutes Away</th>
+                    </tr>
+
+                </thead>
+                <tbody id="trains">
+                        <tr>
+                                <td>Alfreds Futterkiste</td>
+                                <td>Maria Anders</td>
+                                <td>Germany</td>
+                                <td>Germany</td>
+                                <td>Germany</td>
+                              </tr>
+                              <tr>
+                                <td>Centro comercial Moctezuma</td>
+                                <td>Francisco Chang</td>
+                                <td>Mexico</td>
+                                <td>Germany</td>
+                                <td>Germany</td>
+                              </tr>
+                              <tr>
+                                <td>Ernst Handel</td>
+                                <td>Roland Mendel</td>
+                                <td>Austria</td>
+                                <td>Germany</td>
+                                <td>Germany</td>
+                              </tr>
+                              <tr>
+                                <td>Island Trading</td>
+                                <td>Helen Bennett</td>
+                                <td>UK</td>
+                                <td>Germany</td>
+                                <td>Germany</td>
+                              </tr>
+ 
+                    <!--Trains added here-->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="header container mt-2">
+        <div class="row border border-dark rounded">
+            <div class="col-sm-12 bg-dark current antique">
+                Add a Train
+            </div>
+            <form class="p-2">
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Train Name</label>
+                    <input type="text" class="form-control" id="train-input" aria-describedby="emailHelp">
+                </div>
+
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Destination</label>
+                    <input type="text" class="form-control" id="destination-input" aria-describedby="emailHelp">
+                </div>
+
+                <div class="form-group">
+                    <label for="exampleInputEmail1">First Train Time (HH:mm - military time)</label>
+                    <input type="text" class="form-control" id="first-train-time-input" aria-describedby="emailHelp">
+                </div>
+
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Frequency (min)</label>
+                    <input type="text" class="form-control" id="frequency-input" aria-describedby="emailHelp">
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-dark" id="add-train">Submit</button>
+            </form>
+            <br>
+            <br>
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <!-- JavaScript -->
+    <script src="assets/Jquery/app.js"></script>
+</body>
+
+</html>
